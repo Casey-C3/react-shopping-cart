@@ -440,6 +440,13 @@
   scale: .98;
 
 }
+.remove-save {
+  background-color: white;
+  border: none;
+  cursor: pointer;
+  margin: 5px;
+  padding: 5px;
+}
 
 
 

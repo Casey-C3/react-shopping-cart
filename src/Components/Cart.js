@@ -1,13 +1,7 @@
 
 import Summary from './Summary'
 const Cart= ({cartItems,removeProduct,changeQuantity,saveItem}) => {
-
-    
-
-    
     return (
-
-     
         <section className='cart-flex'>
             
             <div className="cart-flex__container">
@@ -34,8 +28,8 @@ const Cart= ({cartItems,removeProduct,changeQuantity,saveItem}) => {
                             </button>
                         </div>
                          
-                        <a href="# "onClick={() => removeProduct(cart)}>Remove</a>
-                        <a href="# " onClick={() => saveItem(cart)}>Save</a>
+                        <button className="remove-save" onClick={() => removeProduct(cart)}>Remove</button>
+                        <button className="remove-save" onClick={() => saveItem(cart)}>Save</button>
                     </div>
 
 
