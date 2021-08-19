@@ -1,7 +1,7 @@
 import React, { useState,useEffect } from 'react'
 import NavBar from './NavBar'
 import Content from './Content'
-import { BrowserRouter as Router,Route, Switch} from 'react-router-dom'
+import { HashRouter as Router,Route, Switch} from 'react-router-dom'
 import Cart from './Cart'
 import SaveLater from './SaveLater'
 import Filter from "./Filter";
@@ -118,7 +118,7 @@ const App = (props) => {
  
 
   return(
-    <Router>
+    <HashRouter>
       <div className='container'>
         <NavBar cartNum={cart} resetFilter={setFilterStatus}/>
         <Switch>
@@ -141,7 +141,7 @@ const App = (props) => {
         </Switch>
        
       </div>
-    </Router>
+    </HashRouter>
 
 
   )
