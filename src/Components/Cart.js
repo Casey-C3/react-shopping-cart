@@ -8,7 +8,7 @@ const Cart= ({cartItems,removeProduct,changeQuantity,saveItem}) => {
                 <h1 style={{marginLeft:20,fontSize:35}}>Cart</h1>
                 
                 {cartItems.map((cart) => (
-                    <div className="cart-flex__container__product">
+                    <div className="cart-flex__container__product" key={cart.id}>
                         <div className="products-summary-img">
                             <img src={cart.image} alt={cart.title}/>
                         </div>

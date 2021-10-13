@@ -6,7 +6,7 @@ const SaveLater = ({savedItems,addProduct,removeSavedItems}) => {
             <div className="save-flex__container">
 
                 {savedItems.map((item) => (
-                    <div className='save-flex__container__product' >
+                    <div className='save-flex__container__product' key={item.id}>
                 
                     <div className='save__del-button'>
                         <FaTimes className='save__del-button-x' onClick={() => removeSavedItems(item)}/>

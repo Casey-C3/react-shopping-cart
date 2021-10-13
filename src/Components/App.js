@@ -28,6 +28,15 @@ const App = (props) => {
      
     }
     fetchData()
+    const cartItems = JSON.parse(localStorage.getItem('cart'));
+    const saveItems = JSON.parse(localStorage.getItem('save'));
+    if (cartItems) {
+      setCart(cartItems);
+    }
+    if (saveItems) {
+      setSaveItems(saveItems);
+    }
+
   },[])
   useEffect(() => {
     const handleFiltering = () => {
@@ -48,6 +57,19 @@ const App = (props) => {
   },[filterStatus,products])
   
   
+  useEffect(() => {
+    console.log(cart.length)
+    if(cart.length) {
+      localStorage.setItem('cart', JSON.stringify(cart));
+    }
+  },[cart])
+
+  useEffect(() => {
+    console.log(saveItems.length)
+    if(saveItems.length) {
+      localStorage.setItem('save', JSON.stringify(saveItems));
+    }
+  },[saveItems])
 
   
   const addToCart = (product) => {
