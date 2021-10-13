@@ -58,17 +58,15 @@ const App = (props) => {
   
   
   useEffect(() => {
-    console.log(cart.length)
-    if(cart.length) {
-      localStorage.setItem('cart', JSON.stringify(cart));
-    }
+    localStorage.setItem('cart', JSON.stringify(cart));
+   
   },[cart])
 
   useEffect(() => {
-    console.log(saveItems.length)
-    if(saveItems.length) {
-      localStorage.setItem('save', JSON.stringify(saveItems));
-    }
+ 
+   
+    localStorage.setItem('save', JSON.stringify(saveItems));
+    
   },[saveItems])
 
   
